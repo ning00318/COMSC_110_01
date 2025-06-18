@@ -56,9 +56,9 @@ int main()
 }
 
 // Comment1: Use 2D array as argument and return the total values in the array
+int total = 0;
 int getTotal(int array[][COLS], int rows)
 {
-	int total = 0;
 	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j < COLS; j++){
 			total += array[i][j];
@@ -70,7 +70,9 @@ int getTotal(int array[][COLS], int rows)
 
 double getAverage(int array[][COLS], int rows)
 {
-    
+	double avg;
+    avg = static_cast<double>(total) / (rows * COLS);
+	return avg;
 }
 
 
