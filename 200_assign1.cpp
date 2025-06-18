@@ -75,7 +75,7 @@ double getAverage(int array[][COLS], int rows)
 	return avg;
 }
 
-// Comment3: Use 2D array and specified number of row as arguments and return the total of values in the specified row
+// Comment3: Use 2D array and specified number of row as arguments, return the total of values in the specified row
 int getRowTotal(int array[][COLS], int rowToTotal)
 {
 	int rowTotal = 0;
@@ -84,7 +84,7 @@ int getRowTotal(int array[][COLS], int rowToTotal)
 	return rowTotal;
 }
 
-// Comment4: Use 2D array and specified number of column as arguments and return the total of values in the specified column
+// Comment4: Use 2D array and specified number of column as arguments, return the total of values in the specified column
 int getColumnTotal(int array[][COLS], int colToTotal, int rows)
 {
 	int colTotal = 0;
@@ -93,10 +93,15 @@ int getColumnTotal(int array[][COLS], int colToTotal, int rows)
 	return colTotal;
 }
 
-
+// Comment5: Use 2D array and specified number of row as arguments, return the maximum value in the specified row
 int getHighestInRow(int array[][COLS], int rowToSearch)
 {
-     
+	int maxInRow = array[rowToSearch][0];
+	for (int j = 1; j < COLS; j++) {
+		if (array[rowToSearch][j] > maxInRow)
+			maxInRow = array[rowToSearch][j];
+	}
+	return maxInRow;
 }
 
 
