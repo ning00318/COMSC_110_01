@@ -55,7 +55,7 @@ int main()
 	return 0;
 }
 
-// Comment1: Use 2D array as argument and return the total values in the array
+// Comment1: Use 2D array as argument and return the total of values in the array
 int total = 0;
 int getTotal(int array[][COLS], int rows)
 {
@@ -67,7 +67,7 @@ int getTotal(int array[][COLS], int rows)
 	return total;
 }
 
-
+// Comment2: Use 2D array as argument and return the average of values in the array
 double getAverage(int array[][COLS], int rows)
 {
 	double avg;
@@ -78,7 +78,10 @@ double getAverage(int array[][COLS], int rows)
 
 int getRowTotal(int array[][COLS], int rowToTotal)
 {
-
+	int rowTotal = 0;
+	for (int j = 0; j < COLS; j++)
+		rowTotal += array[rowToTotal][j];
+	return rowTotal;
 }
 
 
